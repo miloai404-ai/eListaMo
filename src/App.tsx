@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { Wallet, TrendingUp, Users, PiggyBank } from 'lucide-react'
 import Dashboard from './components/Dashboard'
 import Login from './components/Login'
+import BaonMode from './components/BaonMode'
+import UtangTracker from './components/UtangTracker'
+import PersonalLedger from './components/PersonalLedger'
 import './index.css'
 
 function LandingPage() {
@@ -110,6 +113,9 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/ledger" element={<PersonalLedger />} />
+        <Route path="/baon" element={<BaonMode />} />
+        <Route path="/utang" element={<UtangTracker />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
